@@ -3,28 +3,31 @@
     <input type="text" class="add_input" placeholder="add a new mission…" />
     <div class="circle"></div>
     <div class="title">the First thing to do today</div>
-    <div class="timer">25:00</div>
-    <vue-material-icon name="list" :size="32"></vue-material-icon>
-    <vue-material-icon name="insert_chart" :size="32"></vue-material-icon>
-    <vue-material-icon name="library_music" :size="32"></vue-material-icon>
+    <div class="timer" >25:00</div>
+    <vue-material-icon name="list" :size="36" class="xxxxxxx"></vue-material-icon>
+    <vue-material-icon name="insert_chart" :size="36"></vue-material-icon>
+    <vue-material-icon name="library_music" :size="36" A="B"></vue-material-icon>
+
+    <vue-material-icon name="favorite" :size="72" class="xxxxx"></vue-material-icon>
     <div class="right"></div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-// import HelloWorld from '@/components/HelloWorld.vue'
-// import MenuIcon from 'vue-material-design-icons/Menu.vue'
-// import Android from 'vue-material-design-icons/Android.vue'
 
-// import FormatListBulleted from 'vue-material-design-icons/FormatListBulleted.vue'
-// import BookmarkMusic from 'vue-material-design-icons/BookmarkMusic.vue'
-// import PollBox from 'vue-material-design-icons/PollBox.vue'
+import VueMaterialIcon from '@/components/VueMaterialIcon'
+// @ is an alias to /src
 
 export default {
   name: 'Home',
   // components: { FormatListBulleted, PollBox, BookmarkMusic }
-  components: { }
+  components: { VueMaterialIcon },
+  created () {
+    console.log('created')
+  },
+  mounted () {
+    console.log('mounted')
+  }
 }
 </script>
 <style  lang="scss" scoped>
@@ -36,14 +39,12 @@ export default {
   height: 800px;
   background: #ffedf7 0% 0% no-repeat padding-box;
   position: relative;
-  .material-design-icon.icon36px{
-    width: 36px;
-    height: 36px;
-    > .material-design-icon__svg{
-      width: 36px;
-      height: 36px;
-    }
+  .list {
+    position: absolute;
+    top: 48px;
+    left: 1159px;
   }
+
   .timer {
     position: absolute;
     top: 297px;

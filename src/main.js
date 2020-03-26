@@ -6,7 +6,7 @@ import store from './store'
 import VueMaterialIcon from 'vue-material-icon'
 Vue.config.productionTip = false
 
-Vue.component(VueMaterialIcon.name, VueMaterialIcon)
+// Vue.component(VueMaterialIcon.name, VueMaterialIcon)
 new Vue({
   router,
   store,
