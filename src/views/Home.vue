@@ -1,20 +1,29 @@
 <template>
   <div class="home">
-    <input type="text" class="add_input" placeholder="add a new mission…" />
+    <div class="add_input">
+      <input type="text" placeholder="add a new mission…" />
+    </div>
     <div class="circle"></div>
     <div class="title">the First thing to do today</div>
-    <div class="timer" >25:00</div>
-    <vue-material-icon name="list" :size="36" class="xxxxxxx"></vue-material-icon>
-    <vue-material-icon name="insert_chart" :size="36"></vue-material-icon>
-    <vue-material-icon name="library_music" :size="36" A="B"></vue-material-icon>
+    <div class="timer">25:00</div>
+    <div class="right">
+      <vue-material-icon name="list" :size="36" className="mylist"></vue-material-icon>
+      <vue-material-icon name="insert_chart" :size="36" className="chart"></vue-material-icon>
+      <vue-material-icon name="library_music" :size="36" className="music"></vue-material-icon>
+      <div class="a1">POMODORO</div>
+    </div>
+    <div class="big_circle">
+      <div class="inner_circle">
+        <button>
+          <vue-material-icon name="play_circle_filled" :size="96" className="play"></vue-material-icon>
 
-    <vue-material-icon name="favorite" :size="72" class="xxxxx"></vue-material-icon>
-    <div class="right"></div>
+        </button>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-
 import VueMaterialIcon from '@/components/VueMaterialIcon'
 // @ is an alias to /src
 
@@ -33,12 +42,38 @@ export default {
 <style  lang="scss" scoped>
 * {
   display: inline-block;
+  box-sizing: border-box;
 }
 .home {
   width: 1280px;
   height: 800px;
   background: #ffedf7 0% 0% no-repeat padding-box;
   position: relative;
+  .big_circle {
+    position: absolute;
+    top: 130px;
+    left: 560px;
+    width: 540px;
+    height: 540px;
+    border: 4px solid #ff4384;
+    opacity: 1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .inner_circle {
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background-color: #ff4384;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    /deep/ .play{
+      color:white;
+    }
+  }
   .list {
     position: absolute;
     top: 48px;
@@ -83,13 +118,60 @@ export default {
     width: 445px;
     height: 56px;
     background: #ffffff 0% 0% no-repeat padding-box;
+    padding: 19px 16px;
+    background: white;
+    user-select: none;
+
+    & > input {
+      color: black;
+      font: Bold Italic 16px/19px Roboto;
+      border: 0px;
+      width: 100%;
+      outline: none;
+    }
+    & > input::placeholder {
+      color: #ff4384;
+      font: Bold Italic 16px/19px Roboto;
+      text-transform: uppercase;
+    }
+    &::after {
+      content: "+";
+      position: absolute;
+      right: 16px;
+      color: #ff4384;
+      font: Bold 16px/19px Roboto;
+    }
   }
   .right {
-    position: absolute;
+    position: relative;
+    top: 0px;
     left: 830px;
     width: 450px;
     height: 800px;
     background: #003164 0% 0% no-repeat padding-box;
+    color: white;
+    /deep/ .mylist {
+      position: absolute;
+      top: 48px;
+      right: 85px;
+    }
+    /deep/ .chart {
+      position: absolute;
+      top: 132px;
+      right: 85px;
+    }
+    /deep/ .music {
+      position: absolute;
+      top: 216px;
+      right: 85px;
+    }
+    /deep/ .a1 {
+      position: absolute;
+      top: 587px;
+      right: 85px;
+      font: 24px/32px Futura;
+      writing-mode: vertical-lr;
+    }
   }
 }
 </style>
