@@ -1,5 +1,5 @@
 <template functional>
-  <span class="material-icon" :class="props.className" :style="{ fontSize: `${ props.size || 40 }px` }"
+  <span class="material-icon" :class="props.classnname" :style="{ fontSize: `${ props.size || 40 }px` }"
     v-if="props.name">
     {{ props.name }}
   </span>
@@ -12,7 +12,7 @@ export default {
   props: {
     name: String,
     size: Number,
-    className: String,
+    classnname: String,
     A: String
   },
 

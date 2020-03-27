@@ -7,16 +7,15 @@
     <div class="title">the First thing to do today</div>
     <div class="timer">25:00</div>
     <div class="right">
-      <vue-material-icon name="list" :size="36" className="mylist"></vue-material-icon>
-      <vue-material-icon name="insert_chart" :size="36" className="chart"></vue-material-icon>
-      <vue-material-icon name="library_music" :size="36" className="music"></vue-material-icon>
+      <vue-material-icon name="list" :size="36" classnname="mylist"></vue-material-icon>
+      <vue-material-icon name="insert_chart" :size="36" classnname="chart"></vue-material-icon>
+      <vue-material-icon name="library_music" :size="36" classnname="music"></vue-material-icon>
       <div class="a1">POMODORO</div>
     </div>
     <div class="big_circle">
       <div class="inner_circle">
         <button>
-          <vue-material-icon name="play_circle_filled" :size="96" className="play"></vue-material-icon>
-
+          <vue-material-icon name="play_circle_filled" :size="96" classnname="play"></vue-material-icon>
         </button>
       </div>
     </div>
@@ -70,8 +69,8 @@ export default {
       justify-content: center;
       align-items: center;
     }
-    /deep/ .play{
-      color:white;
+    /deep/ .play {
+      color: white;
     }
   }
   .list {
